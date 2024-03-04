@@ -1,0 +1,280 @@
+{
+  "info": {
+    "_postman_id": "bb1521bb-bd76-4176-b17b-8afe3ef4ed1e",
+    "name": "Shared-Auth-API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Auth Service - Create Resource Server",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"identifier\": \"lj-health-food\",\n  \"name\": \"lj-health-food\",\n  \"scopes\": [\n    {\n      \"scopeName\": \"place-order\",\n      \"scopeDescription\": \"Place Order\"\n    },\n    {\n      \"scopeName\": \"list-orders\",\n      \"scopeDescription\": \"List Orders\"\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/resource-servers/",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "resource-servers", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - Delete Resource Server",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/resource-servers/testy",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "resource-servers", "testy"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - List Resource Servers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/resource-servers/",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "resource-servers", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - Create Client",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"clientName\": \"new-app-client-twp\",\n  \"scopes\":[\"lj-health-food/place-order\", \"lj-health-food/list-orders\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/clients/",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "clients", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - List Clients",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/clients/",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "clients", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - Update Client",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"clientId\": \"5satgflhkc5a5t3uc353bn12h4\",\n  \"scopes\":[\"lj-health-food/place-order\"]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/clients/",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "clients", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - Delete Client",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/clients/your-client-id",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "clients", "your-client-id"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth Service - Get Client",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-central-auth-rest-id.execute-api.your-region.amazonaws.com/prod/clients/your-client-id",
+          "protocol": "https",
+          "host": [
+            "your-central-auth-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "clients", "your-client-id"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3rd Party Place Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer\": {\n    \"name\": \"John Doe\",\n    \"email\": \"johndoe@example.com\",\n    \"phone\": \"+1234567890\",\n    \"address\": \"123 Main St, City, Country\"\n  },\n  \"items\": [\n    {\n      \"itemId\": \"1\",\n      \"name\": \"Grilled Chicken Salad\",\n      \"quantity\": 1,\n      \"price\": 7.99\n    },\n    {\n      \"itemId\": \"2\",\n      \"name\": \"Diet Coke\",\n      \"quantity\": 1,\n      \"price\": 2.49\n    },\n    {\n      \"itemId\": \"3\",\n      \"name\": \"Bottled Water\",\n      \"quantity\": 2,\n      \"price\": 1.29\n    }\n  ],\n  \"total\": 13.06,\n  \"paymentMethod\": \"credit card\",\n  \"paymentStatus\": \"paid\",\n  \"orderStatus\": \"in preparation\",\n  \"timestamp\": \"2024-03-05T12:30:00Z\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-3rd-party-rest-id.execute-api.your-region.amazonaws.com/prod/orders/",
+          "protocol": "https",
+          "host": [
+            "your-3rd-party-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}
